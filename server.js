@@ -1,10 +1,14 @@
 const express = require('express');
-const routes = require('./routes');
+const controllers = require('./controllers');
 const PORT = 3001;
 const app = express();
+const sequelize = require('./config/connection');
 
-app.use(routes);
+app.use(controllers);
 
-app.listen(PORT, () => {
-    console.log("THE SERVER WORKS");
+// connect to the database THEN run the server
+sequelize.sync({}).then(() => {
+    app.listen(PORT, () => {
+        console.log("THE SERVER IS RUNNING");
+    })
 })
