@@ -1,0 +1,29 @@
+{
+  "name": "cook_book_by_cole",
+  "version": "1.0.0",
+  "description": "A site with the ability to log recipe titles, and their ingredients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ColeCarter9530/Cook_Book_by_Cole.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ColeCarter9530/Cook_Book_by_Cole/issues"
+  },
+  "homepage": "https://github.com/ColeCarter9530/Cook_Book_by_Cole#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "mysql2": "^3.3.1",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.31.1"
+  }
+}
