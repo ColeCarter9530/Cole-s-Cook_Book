@@ -1,10 +1,20 @@
 const express = require('express');
 const controllers = require('./controllers');
+const exphbs = require('express-handlebars');
 const PORT = 3001;
 const app = express();
 
+// access to the public folder
+app.use(express.static('public'));
+
+const hbs = exphbs.create({});
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+// This is needed for post requests
 app.use(express.json());
 app.use(express.urlencoded( { extended: true}));
+
 const models = require('./models')
 const sequelize = require('./config/connection');
 
