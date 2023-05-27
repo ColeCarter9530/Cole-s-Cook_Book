@@ -1,7 +1,7 @@
 const express = require('express');
 const controllers = require('./controllers');
 const exphbs = require('express-handlebars');
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 // access to the public folder
