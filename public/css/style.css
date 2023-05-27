@@ -3,3 +3,13 @@ body {
     color: black;
 }
 
+page-footer {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: antiquewhite;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
