@@ -6,11 +6,11 @@ router.get('/', (req, res) => {
 })
 
 router.get('/recipes', (req, res) => {
-    Recipes.findAll({})
-    .then((recipes) => {
-        res.render('recipes', {recipes})
-        res.json('please come back soon! this is where you will be able to view your logged recipes');
+    res.json('please come back soon! this is where you will be able to view your logged recipes');
+    Recipes.findAll({
+
     })
+    res.render('recipes', {})
 });
 
 module.exports = router;
