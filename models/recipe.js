@@ -1,25 +1,43 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Recipe extends Model {};
+class Recipes extends Model {};
 
-Recipe.init({
+Recipes.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
-        autoIncrement: true
+        autoIncrement: true,
+      },
+    firstName: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        autoIncrement: false
     },
-    post: {
+    lastName: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        autoIncrement: false
+    },
+    dishName: {
         type: DataTypes.TEXT,
         allowNull: false
     },
-    userId: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'user',
-            key: 'id'
-        },
+    ingredients: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
+    instructions: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            isEmail: true
+        }
     }
 },
 {
@@ -30,4 +48,4 @@ Recipe.init({
     modelName: 'recipe'
 });
 
-module.exports = Recipe;
+module.exports = Recipes;

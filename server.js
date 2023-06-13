@@ -1,7 +1,7 @@
 const express = require('express');
 const controllers = require('./controllers');
 const exphbs = require('express-handlebars');
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 const app = express();
 
 // access to the public folder
@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded( { extended: true}));
 
-const models = require('./models')
+// const Recipes = require('./controllers/recipes')
 const sequelize = require('./config/connection');
 
 app.use(controllers);

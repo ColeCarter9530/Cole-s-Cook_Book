@@ -1,8 +1,12 @@
 body {
     /* background-color: rgb(236, 188, 181); */
     background-color: lightblue;
-    /* background-color: azure; */
     color: black;
+    margin: 3px 0px 3px 0px;
+}
+
+footer {
+  margin-top: 90px;
 }
 
 page-footer {
